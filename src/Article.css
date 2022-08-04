@@ -1,8 +1,7 @@
 article{
     display: inline-block;
-    width: 300px;
     transition: box-shadow 0.2s ease-in-out;
-    margin: 40px 10px 0 10px;
+    margin: 40px 0 0 0;
     background-color: #ffffff;
     border-radius: 5px;
     cursor: pointer;

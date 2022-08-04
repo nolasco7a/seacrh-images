@@ -23,19 +23,21 @@ const App = () => {
             onSubmit={searchImages}
         >
             <Form>
-                <Field type="text" name="search" placeholder="Buscar imagen"/>
+                <Field type="text" name="search" placeholder="Search images"/>
             </Form>
 
         </Formik>
       </header>
-        <div className="container">
-            <div className="center">
-                {photos.map(photo=>(
-                    <article key={photo.id} onClick={()=>open(photo.links.html)}>
-                        <img src={photo.urls.regular} alt={photo.alt_description}/>
-                        <p>{[photo.description, photo.alt_description].join(' - ')}</p>
-                    </article>
-                ))}
+        <div className="main-container">
+            <div className="wrap-container">
+              <div className="container">
+                    {photos.map(photo=>(
+                        <article key={photo.id} onClick={()=>open(photo.links.html)}>
+                            <img src={photo.urls.regular} alt={photo.alt_description}/>
+                            <p>{[photo.user.first_name, photo.user.instagram_username].join(' - instagram: ')}</p>
+                        </article>
+                    ))}
+                </div>  
             </div>
         </div>
     </div>
